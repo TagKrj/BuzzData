@@ -16,6 +16,7 @@
     --color-neutral-600: #565656;
     --color-neutral-700: #1A1A1A;
     --color-neutral-800: #000000;
+    --color-neutral-900: #E73253;
 
     /* Status Colors */
     --color-success: #27AE60;
@@ -133,7 +134,7 @@ body {
 
 /* Navigation Components */
 .nav-sidebar {
-    @apply w-70 bg-white overflow-hidden z-40;
+    @apply w-60 bg-white overflow-hidden z-40;
 }
 
 .nav-item {
@@ -159,4 +160,96 @@ body {
 
 .nav-item-parent-active {
     @apply text-neutral-700 font-semibold;
+}
+
+/* Custom styles for TikTok Ranking component */
+
+.tiktok-ranking {
+    font-family: 'Cabin', sans-serif;
+}
+
+.ranking-badge-gold {
+    background: linear-gradient(135deg, #FFCD28 0%, #FFA500 100%);
+    box-shadow: 0 2px 4px rgba(255, 205, 40, 0.3);
+}
+
+.ranking-badge-silver {
+    background: linear-gradient(135deg, #C0C0C0 0%, #808080 100%);
+    box-shadow: 0 2px 4px rgba(192, 192, 192, 0.3);
+}
+
+.ranking-badge-bronze {
+    background: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%);
+    box-shadow: 0 2px 4px rgba(205, 127, 50, 0.3);
+}
+
+.table-header-bg {
+    background: linear-gradient(90deg, rgba(231, 50, 83, 0.1) 0%, rgba(231, 50, 83, 0.05) 100%);
+}
+
+.product-row:hover {
+    background-color: rgba(249, 248, 246, 0.5);
+    transition: background-color 0.2s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(231, 50, 83, 0.1);
+}
+
+.category-badge {
+    background: rgba(107, 197, 203, 0.5);
+    color: #000;
+}
+
+.favorite-button:hover svg {
+    fill: #E73253;
+    stroke: #E73253;
+}
+
+.pagination-active {
+    background: rgba(231, 50, 83, 0.1);
+    color: #E73253;
+    border: 1px solid rgba(231, 50, 83, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .grid-cols-12 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .col-span-2 {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .col-span-1 {
+        flex: 0 0 80px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .tiktok-ranking {
+        padding: 1rem;
+    }
+
+    .grid-cols-12 {
+        display: block;
+    }
+
+    .product-row {
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* hide calendar icon */
+.hide-calendar-icon::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
