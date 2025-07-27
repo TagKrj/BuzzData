@@ -14,23 +14,17 @@ const TikTokRanking = () => {
     const getRankBadge = (rank) => {
         if (rank === 1) {
             return (
-                <div className="w-8 h-8 ranking-badge-gold rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
-                    1
-                </div>
+                <img src="/src/assets/img/number1.png" alt="Gold Medal" />
             );
         }
         if (rank === 2) {
             return (
-                <div className="w-8 h-8 ranking-badge-silver rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
-                    2
-                </div>
+                <img src="/src/assets/img/number2.png" alt="Silver Medal" />
             );
         }
         if (rank === 3) {
             return (
-                <div className="w-8 h-8 ranking-badge-bronze rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
-                    3
-                </div>
+                <img src="/src/assets/img/number3.png" alt="Bronze Medal" />
             );
         }
         return (
@@ -55,8 +49,8 @@ const TikTokRanking = () => {
                 <TableHeader
                     headers={[
                         { label: '順位', colSpan: 1 },
-                        { label: '店舗', colSpan: 1 },
-                        { label: '商品', colSpan: 2 },
+                        { label: '商品', colSpan: 1 },
+                        { label: '店舗', colSpan: 2 },
                         { label: 'カテゴリー', colSpan: 1 },
                         { label: 'コミッション率', colSpan: 1 },
                         { label: '販売数先週比', colSpan: 1, icon: 'img' },
