@@ -28,7 +28,7 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages = 50 }) => {
     };
 
     return (
-        <div className="flex items-center justify-center gap-2 mt-8 pt-4 border-t border-gray-200">
+        <div className="flex items-center justify-center gap-2  py-3 border-t border-gray-200">
             {/* Previous buttons */}
             <button
                 onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
@@ -51,8 +51,8 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages = 50 }) => {
                             key={page}
                             onClick={() => setCurrentPage(page)}
                             className={`w-8 h-8 rounded text-sm font-medium transition-colors ${currentPage === page
-                                    ? 'pagination-active font-bold'
-                                    : 'bg-gray-100 text-black hover:bg-gray-200'
+                                ? 'pagination-active font-bold'
+                                : 'bg-gray-100 text-black hover:bg-gray-200'
                                 }`}
                         >
                             {page}

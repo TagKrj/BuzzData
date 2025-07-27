@@ -16,7 +16,7 @@ function App() {
       {/* Main content area */}
       <div className="flex-1 flex flex-col">
         <Navbar />
-        <main className="flex-1 overflow-y-auto bg-[#F9F8F6]">
+        <main className="flex-1 overflow-y-auto bg-[#f1f2f3]">
           <TikTokRanking />
         </main>
       </div>
