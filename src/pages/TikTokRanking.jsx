@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FilterSection from '../components/FilterSection';
-import ProductRow from '../components/ProductRow';
+import TikTokProductRow from '../components/rowTable/TikTokProductRow';
 import Pagination from '../components/Pagination';
 import TableHeader from '../components/TableHeader';
 import { mockProductsRealistic } from '../constants/mockData';
@@ -10,29 +10,6 @@ const TikTokRanking = () => {
 
     // Use mock data from constants
     const products = mockProductsRealistic;
-
-    const getRankBadge = (rank) => {
-        if (rank === 1) {
-            return (
-                <img src="/src/assets/img/number1.png" alt="Gold Medal" />
-            );
-        }
-        if (rank === 2) {
-            return (
-                <img src="/src/assets/img/number2.png" alt="Silver Medal" />
-            );
-        }
-        if (rank === 3) {
-            return (
-                <img src="/src/assets/img/number3.png" alt="Bronze Medal" />
-            );
-        }
-        return (
-            <div className="w-8 h-8 flex items-center justify-center text-black font-bold text-lg">
-                {rank}
-            </div>
-        );
-    };
 
     return (
         <div className="tiktok-ranking p-6 shadow-sm rounded-[20px] overflow-hidden ">
@@ -65,9 +42,8 @@ const TikTokRanking = () => {
                 <div className="space-y-1 bg-white rounded-b-md">
                     {products.map((product) => (
                         <div key={product.id} className="product-row">
-                            <ProductRow
+                            <TikTokProductRow
                                 product={product}
-                                getRankBadge={getRankBadge}
                             />
                         </div>
                     ))}

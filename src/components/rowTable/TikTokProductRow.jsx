@@ -1,13 +1,14 @@
 import React from 'react';
-import Star from '../assets/icon/star2.svg';
+import RankBadge from '../RankBadge';
+import FavoriteButton from '../FavoriteButton';
 
-const ProductRow = ({ product, getRankBadge }) => {
+const TikTokProductRow = ({ product }) => {
     return (
         <div className="border-b border-gray-200 py-3 hover:bg-gray-50 transition-colors">
             <div className="grid grid-cols-11 gap-4 items-center text-xs text-black font-medium">
                 {/* Rank */}
                 <div className="col-span-1 flex justify-center">
-                    {getRankBadge(product.rank)}
+                    <RankBadge rank={product.rank} />
                 </div>
 
                 {/* Store */}
@@ -39,7 +40,7 @@ const ProductRow = ({ product, getRankBadge }) => {
                                 alt="Product"
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
-                                    e.target.src = 'data:image/svg+xml;base64,...'; // giữ nguyên placeholder
+                                    e.target.src = 'data:image/svg+xml;base64,...';
                                 }}
                             />
                         </div>
@@ -73,20 +74,10 @@ const ProductRow = ({ product, getRankBadge }) => {
                 <div className="col-span-1 text-center">{product.cumulativeRevenue}</div>
 
                 {/* Favorite */}
-                <div className="col-span-1 text-center">
-                    <button className="favorite-button text-gray-400 hover:text-red-500 transition-colors p-1 cursor-pointer">
-                        <img
-                            src={Star}
-                            alt="Star"
-                            width={20}
-                            height={19}
-                            style={{ display: 'inline-block', verticalAlign: 'middle' }}
-                        />
-                    </button>
-                </div>
+                <FavoriteButton />
             </div>
         </div>
     );
 };
 
-export default ProductRow;
+export default TikTokProductRow;
