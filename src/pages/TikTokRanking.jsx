@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FilterSection from '../components/FilterSection';
 import ProductRow from '../components/ProductRow';
 import Pagination from '../components/Pagination';
+import TableHeader from '../components/TableHeader';
 import { mockProductsRealistic } from '../constants/mockData';
 
 const TikTokRanking = () => {
@@ -51,49 +52,20 @@ const TikTokRanking = () => {
 
 
             <div className='rounded-[20px] bg-white shadow-sm'>
-                <div className="table-header-bg px-4 py-3  rounded-t-md">
-                    {/* Table Header */}
-                    <div className="grid grid-cols-12 gap-4 text-xs font-bold text-black">
-                        <div className="col-span-1 text-center">順位</div>
-                        <div className="col-span-1 text-center">店舗</div>
-                        <div className="col-span-2 text-center">商品</div>
-                        <div className="col-span-1 text-center">カテゴリー</div>
-                        <div className="col-span-1 text-center">コミッション率</div>
-                        <div className="col-span-1 text-center">
-                            <div className="flex items-center justify-center gap-1">
-                                販売数先週比
-                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="col-span-1 text-center">
-                            <div className="flex items-center justify-center gap-1">
-                                売上高
-                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="col-span-1 text-center">
-                            <div className="flex items-center justify-center gap-1">
-                                累積販売数量
-                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="col-span-1 text-center">
-                            <div className="flex items-center justify-center gap-1">
-                                累積売上
-                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="col-span-1 text-center">お気に入り</div>
-                    </div>
-                </div>
+                <TableHeader
+                    headers={[
+                        { label: '順位', colSpan: 1 },
+                        { label: '店舗', colSpan: 1 },
+                        { label: '商品', colSpan: 2 },
+                        { label: 'カテゴリー', colSpan: 1 },
+                        { label: 'コミッション率', colSpan: 1 },
+                        { label: '販売数先週比', colSpan: 1, icon: 'img' },
+                        { label: '売上高', colSpan: 1, icon: 'img' },
+                        { label: '累積販売数量', colSpan: 1, icon: 'img' },
+                        { label: '累積売上', colSpan: 1, icon: 'img' },
+                        { label: 'お気に入り', colSpan: 1 }
+                    ]}
+                />
 
                 {/* Product Rows */}
                 <div className="space-y-1 bg-white rounded-b-md">

@@ -33,8 +33,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥3,712.1万',
         storeInfo: '店舗販売数：8,920',
         isFavorite: false,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 2,
@@ -50,8 +50,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,891.7万',
         storeInfo: '店舗販売数：6,430',
         isFavorite: true,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 3,
@@ -67,8 +67,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,872.8万',
         storeInfo: '店舗販売数：11,200',
         isFavorite: false,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 4,
@@ -84,8 +84,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,284.8万',
         storeInfo: '店舗販売数：5,600',
         isFavorite: false,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 5,
@@ -101,8 +101,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,652.0万',
         storeInfo: '店舗販売数：18,900',
         isFavorite: true,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 6,
@@ -118,8 +118,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,650.6万',
         storeInfo: '店舗販売数：3,200',
         isFavorite: false,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 7,
@@ -135,8 +135,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,499.0万',
         storeInfo: '店舗販売数：9,800',
         isFavorite: false,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 8,
@@ -152,8 +152,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,565.0万',
         storeInfo: '店舗販売数：4,900',
         isFavorite: false,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 9,
@@ -169,8 +169,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,130.0万',
         storeInfo: '店舗販売数：12,100',
         isFavorite: true,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     },
     {
         id: 10,
@@ -186,8 +186,8 @@ export const mockProductsRealistic = [
         cumulativeRevenue: '¥2,080.8万',
         storeInfo: '店舗販売数：2,100',
         isFavorite: false,
-        image: '/api/placeholder/72/72',
-        storeImage: '/api/placeholder/64/64'
+        image: '/src/assets/img/img2.png',
+        storeImage: '/src/assets/img/img1.png'
     }
 ];
 
