@@ -26,8 +26,8 @@ const TableHeader = ({ headers = [], onColumnClick }) => {
     };
 
     return (
-        <div className="px-4 py-3 rounded-t-md w-full overflow-hidden">
-            <div className={`grid ${getGridClass(totalColSpan)} gap-1 text-xs font-bold text-black`}>
+        <div className=" rounded-t-md w-full overflow-hidden border-b-gray-200 border-b min-h-[40px]">
+            <div className={`grid ${getGridClass(totalColSpan)} gap-1 text-xs font-bold text-black h-full`}>
                 {headers.map((header, index) => {
                     const isClickable = !!header.icon;
                     const isActive = index === activeIndex;
@@ -45,10 +45,10 @@ const TableHeader = ({ headers = [], onColumnClick }) => {
                     return (
                         <div
                             key={index}
-                            className={`${getColSpanClass(header.colSpan || 1)} text-center`}
+                            className={`${getColSpanClass(header.colSpan || 1)} text-center w-full h-full flex items-center justify-center`}
                         >
                             <div
-                                className={`flex items-center justify-center gap-1 px-2 py-1 rounded-md w-full h-full
+                                className={`flex items-center justify-center gap-1 px-3 py-3 w-full h-full min-h-[44px]
                                     ${isClickable ? 'cursor-pointer' : ''}
                                     ${isActive ? 'bg-[#FFE5E5] text-[#E73253]' : ''}
                                     ${isClickable && !isActive ? 'hover:bg-[#FFE5E5] hover:text-[#E73253]' : ''}

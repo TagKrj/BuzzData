@@ -31,7 +31,7 @@ const TikTokProductRow = ({ product, activeColumnIndex, totalColumns = 11 }) => 
                 {/* Store */}
                 <div className="col-span-1">
                     <div className="flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-full border border-gray-300 overflow-hidden bg-gray-50">
+                        <div className="w-12 h-12 border border-gray-300 overflow-hidden bg-gray-50">
                             <img
                                 src={product.image || '/api/placeholder/64/64'}
                                 alt="Store"
@@ -51,7 +51,7 @@ const TikTokProductRow = ({ product, activeColumnIndex, totalColumns = 11 }) => 
                 {/* Product */}
                 <div className="col-span-2">
                     <div className="flex items-start gap-3">
-                        <div className="w-16 h-16 bg-gray-200 rounded overflow-hidden">
+                        <div className="w-12 h-12  rounded overflow-hidden">
                             <img
                                 src={product.storeImage || '/api/placeholder/72/72'}
                                 alt="Product"

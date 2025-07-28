@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FilterSection from '../components/FilterSection';
-import TikTokProductRow from '../components/rowTable/TikTokProductRow';
+import SalesRankingRow from '../components/rowTable/SalesRankingRow';
 import Pagination from '../components/Pagination';
 import TableHeader from '../components/TableHeader';
 import { mockProductsRealistic } from '../constants/mockData';
@@ -54,7 +54,7 @@ const TikTokRanking = () => {
                 <div className="space-y-1 bg-white rounded-b-md">
                     {products.map((product) => (
                         <div key={product.id} className="product-row">
-                            <TikTokProductRow
+                            <SalesRankingRow
                                 product={product}
                                 activeColumnIndex={activeColumnIndex}
                                 totalColumns={totalColumns}
