@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { menuItems } from '../constants/menuItems.jsx';
+import { useNavigate } from 'react-router-dom';
 import logo from "../assets/logo/LogoBuzzData.png";
 
 const NAVBAR_HEIGHT = 66; // px, nhớ đồng bộ với Navbar
@@ -7,6 +8,7 @@ const NAVBAR_HEIGHT = 66; // px, nhớ đồng bộ với Navbar
 const Sidebar = () => {
     const [activeItem, setActiveItem] = useState('home');
     const [expandedMenus, setExpandedMenus] = useState([]);
+    const navigate = useNavigate();
 
     const toggleSubmenu = (menuId) => {
         setExpandedMenus(prev =>
@@ -20,6 +22,12 @@ const Sidebar = () => {
         setActiveItem(item.id);
         if (item.hasSubmenu) {
             toggleSubmenu(item.id);
+            // Nếu có linkRouter, cũng navigate luôn
+            if (item.linkRouter) {
+                navigate(item.linkRouter);
+            }
+        } else if (item.linkRouter) {
+            navigate(item.linkRouter);
         }
     };
 
@@ -75,7 +83,12 @@ const Sidebar = () => {
                                         key={subItem.id}
                                         className={`nav-item cursor-pointer ${activeItem === subItem.id ? 'nav-item-active' : ''
                                             }`}
-                                        onClick={() => setActiveItem(subItem.id)}
+                                        onClick={() => {
+                                            setActiveItem(subItem.id);
+                                            if (subItem.linkRouter) {
+                                                navigate(subItem.linkRouter);
+                                            }
+                                        }}
                                     >
                                         {subItem.icon && (
                                             <div className="w-5 h-5 text-current">

@@ -30,8 +30,10 @@ export const menuItems = [
                 style={{ display: 'inline-block', verticalAlign: 'middle' }}
             />
         ),
+        linkRouter: '/SalesRanking',
         hasSubmenu: true,
-        submenu: []
+        submenu: [
+        ]
     },
     {
         id: 'インフルエンサー',

@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from './layouts/Sidebar.jsx';
 import Navbar from './layouts/Navbar.jsx';
 import Footer from './layouts/Footer.jsx';
-import TikTokRanking from './pages/TikTokRanking.jsx';
+import SalesRanking from './pages/SalesRanking.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -17,7 +17,10 @@ function App() {
       <div className="flex-1 flex flex-col">
         <Navbar />
         <main className="flex-1 overflow-y-auto bg-[#f1f2f3]">
-          <TikTokRanking />
+          <Routes>
+            <Route path="/" element={<div className="p-6">Welcome to BuzzData Dashboard</div>} />
+            <Route path="/SalesRanking" element={<SalesRanking />} />
+          </Routes>
         </main>
       </div>
     </div>
